@@ -27,7 +27,7 @@ def create_pool(loop, **kw):
 
 #select
 @asyncio.coroutine
-def select(sql, ags, size=None):
+def select(sql, args, size=None):
 	log(sql, args)
 	global __pool
 	with (yield from __pool) as conn:
