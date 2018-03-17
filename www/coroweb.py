@@ -72,15 +72,14 @@ def get_required_kw_args(fn):
 	return tuple(args)
 
 class RequestHandler(object):
-	
-	def __init__(self, app, fn):
-		self._app = app
-		self._func = fn
-		self._has_request_arg = has_request_arg(fn)
-		self._has_var_kw_arg = has_var_kw_arg(fn)
-		self._has_named_kw_args = has_named_kw_args(fn)
-		self._named_kw_args = get_named_kw_args(fn)
-		self._required_kw_args = get_required_kw_args(fn)
+    def __init__(self, app, fn):
+        self._app = app
+        self._func = fn
+        self._has_request_arg = has_request_arg(fn)
+        self._has_var_kw_arg = has_var_kw_arg(fn)
+        self._has_named_kw_args = has_named_kw_args(fn)
+        self._named_kw_args = get_named_kw_args(fn)
+        self._required_kw_args = get_required_kw_args(fn)
 
     @asyncio.coroutine
     def __call__(self, request):
