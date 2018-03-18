@@ -4,8 +4,8 @@ configs = {
 	    'host':'127.0.0.1',
 	    'port':3306,
 	    'user':'www-data',
-	    'psaaword':'www-data'
-	    'database':'aaa'
+	    'password':'www-data'
+	    'db':'aaa'
 	},
 	'session': {
 	    'secret': 'Aaa'
